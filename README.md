@@ -43,7 +43,3 @@ A ferramenta permite que o usuário defina um valor de aposta inicial. A cada pe
 *   HTML5
 *   CSS3 (com Grid Layout para organização)
 *   JavaScript (Vanilla JS - sem frameworks/bibliotecas externas)
-
-## Screenshot (Exemplo)
-
-*(É altamente recomendado adicionar um screenshot da interface aqui para visualização rápida)*
