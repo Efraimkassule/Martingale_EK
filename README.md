@@ -8,16 +8,16 @@ Esta é uma calculadora web simples desenvolvida por Efraim Kassule (EK PICTURES
 
 A ferramenta permite que o usuário defina um valor de aposta inicial. A cada perda registrada, a calculadora dobra o valor da aposta seguinte. Ao registrar um ganho, a sequência é considerada bem-sucedida, o lucro (equivalente à aposta inicial) é adicionado ao total geral, e a sequência é reiniciada com a aposta inicial. A calculadora mantém o controle do investimento total na sequência atual e do lucro acumulado durante a sessão.
 
-# Funcionalidades
+## Funcionalidades
 
-   **Definir Aposta Inicial:** Campo para inserir o valor da primeira aposta da sequência (em Kz).
-   **Iniciar Sessão:** Botão para começar a calcular com base na aposta inicial.
-   **Registrar Perda ("Perdi"):** Incrementa o total investido na sequência, dobra a aposta atual e aumenta o contador de tentativas da sequência.
-   **Registrar Ganho ("Ganhei"):** Adiciona o valor da aposta inicial ao lucro total geral, reinicia a aposta atual para o valor inicial, zera o total investido na sequência e o número de tentativas.
-   **Resetar Sequência ("Resetar Seq."):** Reinicia a aposta atual para o valor inicial, zerando o total investido e as tentativas *da sequência atual*, sem afetar o lucro total geral. Útil para abandonar uma sequência específica sem finalizar a sessão.
-   **Finalizar Sessão ("Finalizar"):** Zera todos os contadores (aposta atual, investimento na sequência, tentativas, lucro total geral), limpa o campo de entrada e retorna a calculadora ao estado inicial. Exibe uma mensagem com o lucro total acumulado na sessão.
-   **Feedback Visual:**
-       Exibição clara da Aposta Atual, Lucro Total, Total Investido na Sequência e Tentativas na Sequência.
+*   **Definir Aposta Inicial:** Campo para inserir o valor da primeira aposta da sequência (em Kz).
+*   **Iniciar Sessão:** Botão para começar a calcular com base na aposta inicial.
+*   **Registrar Perda ("Perdi"):** Incrementa o total investido na sequência, dobra a aposta atual e aumenta o contador de tentativas da sequência.
+*   **Registrar Ganho ("Ganhei"):** Adiciona o valor da aposta inicial ao lucro total geral, reinicia a aposta atual para o valor inicial, zera o total investido na sequência e o número de tentativas.
+*   **Resetar Sequência ("Resetar Seq."):** Reinicia a aposta atual para o valor inicial, zerando o total investido e as tentativas *da sequência atual*, sem afetar o lucro total geral. Útil para abandonar uma sequência específica sem finalizar a sessão.
+*   **Finalizar Sessão ("Finalizar"):** Zera todos os contadores (aposta atual, investimento na sequência, tentativas, lucro total geral), limpa o campo de entrada e retorna a calculadora ao estado inicial. Exibe uma mensagem com o lucro total acumulado na sessão.
+*   **Feedback Visual:**
+    *   Exibição clara da Aposta Atual, Lucro Total, Total Investido na Sequência e Tentativas na Sequência.
     *   Mensagens de status dinâmicas para informar o usuário sobre ações (início, perda, ganho, reset, finalização) e erros (valor inicial inválido).
     *   Desabilitação/habilitação de botões conforme o estado do jogo (iniciado/não iniciado).
 *   **Validação:** Impede o início com valores de aposta inválidos (não numéricos, zero ou negativos).
@@ -43,3 +43,7 @@ A ferramenta permite que o usuário defina um valor de aposta inicial. A cada pe
 *   HTML5
 *   CSS3 (com Grid Layout para organização)
 *   JavaScript (Vanilla JS - sem frameworks/bibliotecas externas)
+
+## Screenshot (Exemplo)
+
+*(É altamente recomendado adicionar um screenshot da interface aqui para visualização rápida)*
