@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>EK PICTURES - Calculadora</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to the external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <h2>EK PICTURES</h2>
+    <p class="byline">By Efraim Kassule</p>
+
+    <label for="inicialInput">Aposta inicial (Kz):</label>
+    <input type="number" id="inicialInput" placeholder="Ex: 500" min="1" step="any" />
+    <p id="errorMessage" class="error-message"></p>
+
+    <!-- Botão Iniciar (fora da grade de ações) -->
+    <button type="button" id="btnIniciar">Iniciar</button>
+
+    <!-- Área de Status Dinâmico -->
+    <div id="statusMessage" aria-live="assertive"></div>
+
+    <!-- Output em Grade 2x2 -->
+    <div class="output">
+      <div><strong>Aposta atual:</strong> <span id="apostaAtual">-</span> Kz</div>
+      <div><strong>Lucro total (geral):</strong> <span id="lucroTotal">-</span> Kz</div>
+      <div><strong>Total investido (sequência):</strong> <span id="totalPerdido">-</span> Kz</div>
+      <div><strong>Tentativas (sequência):</strong> <span id="tentativas">-</span></div>
+    </div>
+
+    <!-- Botões de Ação em Grade 2x2 -->
+    <div class="action-buttons">
+        <button type="button" id="btnPerdi">Perdi</button>
+        <button type="button" id="btnGanhei">Ganhei</button>
+        <button type="button" id="btnResetar">Resetar Seq.</button>
+        <button type="button" id="btnFinalizarSessao">Finalizar</button>
+    </div>
+
+    <p class="note">Paciência e persistência.</p>
+  </div>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
