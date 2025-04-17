@@ -1,0 +1,194 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f4f7f6;
+  padding: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 450px; /* Levemente mais largo para acomodar a grade */
+  margin: 40px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: center;
+}
+h2 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+.byline {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1em;
+  color: #34495e;
+  text-align: left;
+}
+input[type="number"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  text-align: left;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Estilo geral para botões fora da grade de ação */
+#btnIniciar {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 20px; /* Espaço antes da msg de status */
+    padding: 13px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    background-color: #2ecc71; /* Verde */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-sizing: border-box;
+}
+ #btnIniciar:hover:not(:disabled) { background-color: #27ae60; }
+ #btnIniciar:active:not(:disabled) { transform: scale(0.98); }
+ #btnIniciar:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #888;
+ }
+
+/* Container para a grade de botões de ação */
+.action-buttons {
+    display: grid; /* Habilita Grid Layout */
+    grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+    gap: 10px; /* Espaçamento entre os botões */
+    margin-top: 20px; /* Espaço acima da grade de botões */
+}
+
+/* Estilos para botões DENTRO da grade de ação */
+.action-buttons button {
+    /* Não precisam de margin-top individual, o 'gap' cuida disso */
+    width: 100%; /* Ocupa toda a célula da grade */
+    padding: 12px 5px; /* Padding ajustado para caber melhor */
+    font-size: 15px; /* Fonte ligeiramente menor se necessário */
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-sizing: border-box;
+}
+.action-buttons button:hover:not(:disabled) { filter: brightness(90%); } /* Efeito hover genérico */
+.action-buttons button:active:not(:disabled) { transform: scale(0.97); }
+.action-buttons button:disabled {
+  background-color: #cccccc !important; /* Força cor cinza quando desabilitado */
+  cursor: not-allowed;
+  color: #888;
+}
+
+/* Cores específicas para botões de ação */
+#btnPerdi { background-color: #e74c3c; } /* Vermelho */
+#btnGanhei { background-color: #1abc9c; } /* Turquesa */
+#btnResetar { background-color: #f39c12; } /* Laranja */
+#btnFinalizarSessao { background-color: #9b59b6; } /* Roxo */
+
+
+/* --- Layout da Seção de Output --- */
+.output {
+  margin-top: 15px; /* Espaço após a msg de status */
+  padding-top: 0; /* Remover padding-top, usar gap */
+  border-top: none; /* Remover borda superior, layout de grade é suficiente */
+  text-align: left;
+
+  /* Grid Layout para Output */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas iguais */
+  gap: 10px 15px; /* 10px entre linhas, 15px entre colunas */
+  border: 1px solid #ecf0f1; /* Adicionar uma borda suave ao redor da grade */
+  padding: 15px; /* Padding interno da grade */
+  border-radius: 8px; /* Bordas arredondadas para a área de output */
+  background-color: #fafafa; /* Fundo levemente diferente para output */
+}
+/* Ajuste para cada item do output */
+.output div {
+  margin-bottom: 0; /* Remover margem, usar gap */
+  font-size: 1em; /* Tamanho de fonte ajustado */
+  display: block; /* Mudar de flex para block, o valor ficará abaixo */
+  padding: 8px; /* Espaçamento interno */
+  background-color: #fff; /* Fundo branco para cada item */
+  border-radius: 5px; /* Borda arredondada */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); /* Sombra leve */
+}
+.output strong {
+    color: #555;
+    display: block; /* Label ocupa a linha toda */
+    margin-bottom: 4px; /* Espaço entre label e valor */
+    font-size: 0.9em; /* Label menor */
+}
+.output span {
+  font-weight: bold;
+  color: #3498db;
+  background-color: transparent; /* Remover fundo anterior */
+  padding: 0; /* Remover padding anterior */
+  border-radius: 0;
+  min-width: auto;
+  text-align: left; /* Alinhar valor à esquerda */
+  display: inline-block; /* Para que o 'Kz' fique ao lado */
+  font-size: 1.1em; /* Valor um pouco maior */
+}
+
+/* --- Mensagens de Erro e Status --- */
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9em;
+  margin-top: 8px; /* Aumentar espaço */
+  margin-bottom: 5px; /* Espaço antes do botão Iniciar */
+  min-height: 1.2em;
+  text-align: left;
+}
+#statusMessage {
+    margin-top: 0; /* Remover margin top, já tem no botão iniciar */
+    margin-bottom: 15px; /* Espaço antes do output */
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    min-height: 1.5em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, background-color 0.3s ease, color 0.3s ease; /* Transições suaves */
+    text-align: center;
+}
+#statusMessage.show { opacity: 1; }
+#statusMessage.status-success { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+#statusMessage.status-error { background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+#statusMessage.status-info { background-color: #d1ecf1; color: #0c5460; border: 1px solid #bee5eb; }
+
+/* --- Nota Final --- */
+.note {
+    font-style: italic;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed #bdc3c7;
+    font-size: 0.95em;
+}
